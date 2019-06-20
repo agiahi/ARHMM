@@ -1,0 +1,1 @@
+function rwb = rwbmap(ncolors);%function rwb = rwbmap(ncolors);%	Returns a colormap going from Red to White to Blue using ncolors.if nargin<1	ncolors=256;endncolors = 2*floor(ncolors/2);nmax = ncolors/2 - 1;r = [repmat(nmax,1,ncolors/2),nmax:-1:0]/nmax;g = [0:nmax,nmax:-1:0]/nmax;b = [0:nmax,repmat(nmax,1,ncolors/2)]/nmax;rwb = [r;g;b]';
